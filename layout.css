@@ -1,0 +1,454 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/***** BODY *****/
+
+body {
+    background-color: white;
+}
+
+p {
+    font-family: 'Arial narrow', sans-serif;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-size: 16pt;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Arial narrow', sans-serif;
+    font-size: 25pt;
+}
+
+h3 {
+    font-family: 'futura narrow', sans-serif;
+    padding-top: 20px;
+}
+
+h4 {
+    font-family: 'futura narrow', sans-serif;
+    text-align: center;
+    font-size: 12pt;
+}
+
+h4:hover {
+    transform: scale(1.3);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/******* HEADER *********/
+
+header {
+    margin-top: 0;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    text-align: left;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    padding: 2em;
+}
+
+nav a {
+    text-align: center;
+    text-decoration: none;
+    font-family: 'futura', sans-serif;
+    color: black;
+    font-size: 20pt;
+    padding-right: 10px;
+    padding-left: 0;
+}
+
+
+/****** FORSIDE ******/
+
+#forside {
+    width: 100vw;
+    height: 83.73vw;
+    background-image: url(splash_img/mobile_portrait.jpg);
+    background-size: cover;
+    margin-top: 70px;
+    padding-top: 1px;
+}
+
+
+/***** media queries ****/
+
+@media screen and (min-width:376px) and (orientation: landscape) {
+    #forside {
+        background-image: url(splash_img/mobile_landscape.jpg);
+        height: 29.98vw;
+    }
+}
+
+@media screen and (min-width: 628px) and (orientation:portrait) {
+    #forside {
+        background-image: url(splash_img/mobile_portrait.jpg);
+        height: 66.66vw;
+    }
+}
+
+@media screen and (min-width: 769px) and (orientation: landscape) {
+    #forside {
+        background-image: url(splash_img/tablet_landscape.jpg);
+        height: 37.5vw;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #forside {
+        background-image: url(splash_img/desktop.jpg);
+        height: 28.13vw;
+    }
+}
+
+@media screen and (min-width: 2061px) {
+    #forside {
+        background-image: url(splash_img/retina.jpg);
+        height: 27.34vw;
+    }
+}
+
+
+/***** FORSIDE ******/
+
+#forside {
+    margin-top: 50px;
+}
+
+#forside .column {
+    align-content: center;
+    flex-basis: 300px;
+}
+
+
+/****** OM *******/
+
+#om {
+    max-width: 1024px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+#om .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+#om .column {
+    flex-basis: 500px;
+}
+
+#om .column img {
+    width: 100%;
+    height: auto;
+    padding-right: 20px;
+}
+
+
+/****** OVERSIGT ******/
+
+#oversigt {
+    max-width: 1024px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    margin-top: 50px;
+    padding-bottom: 0px;
+}
+
+#oversigt .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#oversigt .column {
+    flex-basis: 300px;
+    flex-grow: 1;
+    align-self: auto;
+    padding: 20px 20px;
+}
+
+#oversigt img {
+    /*    background-image: url("img/lior1500x870px.png");*/
+    width: 95%;
+    height: auto;
+    /*outline: 2px dashed red;*/
+    transition: all 1s;
+    filter: brightness(100%);
+    margin-bottom: 20px;
+}
+
+#oversigt img:hover {
+    /*filter: opacity(25%);*/
+    /*filter: brightness(120%);*/
+    transform: scale(1.1);
+}
+
+
+/****** ANIMATION ******/
+
+#animation_1 {
+    max-width: 1024px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    margin-top: 50px;
+    padding-bottom: 0px;
+}
+
+#animation_1 .column {
+    flex-wrap: wrap;
+    width: 80%;
+    height: 100%;
+    margin: 0 10% 0 10%;
+}
+
+#animation_1 .column img {
+    width: 75%;
+    height: auto;
+}
+
+
+/****** UX KEAFOLIO******/
+
+#ux_keafolio {
+    max-width: 1024px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    margin-top: 50px;
+    padding-bottom: 0px;
+}
+
+#ux_keafolio .column {
+    flex-wrap: wrap;
+    width: 80%;
+    height: 100%;
+    margin: 0 10% 0 10%;
+}
+
+#ux_keafolio .column img {
+    width: 75%;
+    height: auto;
+}
+
+#ux_keafolio q {
+    quotes: '»''«';
+}
+
+
+/******* CPH DOX *******/
+
+#cphdox {
+    max-width: 1024px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    margin-top: 50px;
+    padding-bottom: 0px;
+}
+
+#cphdox .column {
+    width: 80%;
+    height: 100%;
+    margin: 0 10% 0 10%;
+}
+
+#cphdox .column video {
+    width: 100%;
+    height: 100%;
+}
+
+#cphdox .column img {
+    width: 75%;
+    height: auto;
+}
+
+
+/***** WEB *****/
+
+#web {
+    max-width: 1024px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    margin-top: 50px;
+    padding-bottom: 0px;
+}
+
+#web .column {
+    width: 80%;
+    height: 100%;
+    margin: 0 10% 0 10%;
+}
+
+#web .column img {
+    width: 75%;
+    height: auto;
+}
+
+
+/***** UX REPUBLIKKEN *****/
+
+#ux_republikken {
+    max-width: 1024px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    margin-top: 50px;
+    padding-bottom: 0px;
+}
+
+#ux_republikken .column {
+    flex-wrap: wrap;
+    width: 80%;
+    height: 100%;
+    margin: 0 10% 0 10%;
+}
+
+#ux_republikken .column img {
+    width: 75%;
+    height: auto;
+}
+
+
+/******* PERSISK BAZAAR*********/
+
+#persiskbazaar {
+    max-width: 1024px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    margin-top: 50px;
+    padding-bottom: 0px;
+}
+
+#persiskbazaar .column {
+    width: 80%;
+    height: 100%;
+    margin: 0 10% 0 10%;
+}
+
+#persiskbazaar .column video {
+    width: 100%;
+    height: auto;
+}
+
+
+/***** REDESIGN_PB *****/
+
+#redesign_pb {
+    max-width: 1024px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    margin-top: 50px;
+    padding-bottom: 0px;
+}
+
+#redesign_pb .column {
+    width: 80%;
+    height: 100%;
+    margin: 0 10% 0 10%;
+}
+
+#redesign_pb .column img {
+    padding-top: 30px;
+    width: 75%;
+    height: auto;
+}
+
+
+/******* kontakt *******/
+
+#kontakt {
+    max-width: 1024px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    margin-top: 100PX;
+}
+
+
+/* Style inputs with type="text", select elements and textareas */
+
+input[type=text],
+select,
+textarea {
+    width: 70%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* margin */
+    display: block;
+    margin: 6px auto 16px auto;
+    resize: vertical/* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+/* Style the submit button with a specific background color etc */
+
+input[type=submit] {
+    background-color: #000;
+    /*** husk at ændre farve her ****/
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    display: block;
+    margin: auto;
+}
+
+
+/* When moving the mouse over the submit button, add a darker color */
+
+input[type=submit]:hover {
+    background-color: #C4654F;
+}
+
+
+/***** FOOTER ****/
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
+    background-color: #fff;
+    padding-top: 50px;
+}
+
+footer img {
+    width: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: all 1s;
+    filter: brightness(100%);
+}
+
+footer img:hover {
+    filter: brightness(120%);
+    transform: scale(1.5);
+}
